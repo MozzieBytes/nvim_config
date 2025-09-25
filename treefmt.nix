@@ -1,0 +1,3 @@
+{
+  programs.stylua.enable = true;
+}
