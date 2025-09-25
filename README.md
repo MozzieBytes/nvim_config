@@ -17,7 +17,7 @@ either independently, or as part of a [home-manager](https://github.com/nix-comm
 
 Despite being designed with home-manager in mind, this configuration still uses a combination of the Lazy Plugin-Manager and Mason for the management of dependencies.
 
-The exception to this is language-servers, which are expected to be installed externally to the editor using your preferred package manager. 
+The exception to this is language-servers, which are expected to be installed externally to the editor using your preferred package manager.
 
 This approach allows this configuration to run on systems that don't utilize Nix.
 
@@ -26,7 +26,7 @@ This approach allows this configuration to run on systems that don't utilize Nix
 > [!NOTE]
 > Not all plugins are listed here. Some are omitted for brevity
 
-| Plugin | Explanation | 
+| Plugin | Explanation |
 |:------:|:-----------:|
 | Language Servers | The following languages are currently supported: Go, Lua, Terraform, Nix |
 | [direnv.nvim](https://github.com/actionshrimp/direnv.nvim) | A wrapper around direnv, that allows for hot-loading of environment changes within the Neovim shell. |
@@ -36,7 +36,7 @@ This approach allows this configuration to run on systems that don't utilize Nix
 
 ## Local Development
 
-This project is set up to be developed with the attached [nix flake](./flake.nix), and [direnv](https://direnv.net/). 
+This project is set up to be developed with the attached [nix flake](./flake.nix), and [direnv](https://direnv.net/).
 
 This allows this project to manage it's own dependencies within an ephemeral nix-shell.
 
@@ -57,7 +57,7 @@ To install this configuration onto a machine without home-manager, simply clone 
 
 ### With home-manager (Nix Flakes)
 
-To add this configuration to your system using home-manager with nix flakes. 
+To add this configuration to your system using home-manager with nix flakes.
 
 Add the following to your flake:
 
@@ -96,4 +96,3 @@ Add the following to your flake:
       };
 }
 ```
-

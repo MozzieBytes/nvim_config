@@ -22,7 +22,6 @@
         { pkgs, ... }:
         {
           programs = {
-            ollama.enable = true;
             lazygit.enable = true;
             neovim = {
               enable = true;
