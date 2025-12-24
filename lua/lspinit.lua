@@ -9,7 +9,10 @@ if handle then
 		end
 		if type == "file" and name:sub(-4) == ".lua" then
 			local lsp_name = name:sub(1, -5)
-			vim.lsp.enable(lsp_name)
+      local config = vim.lsp.config[lsp_name]
+      if config.cmd and vim.fn.executable(config.cmd[1]) == 1 then
+			  vim.lsp.enable(lsp_name)
+      end
 		end
 	end
 end
