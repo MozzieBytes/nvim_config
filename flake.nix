@@ -8,48 +8,48 @@
     };
   };
   outputs =
-  {
-    nix-global,
-    ...
-  }:
-  let
-    fmtConf = {
-      programs.stylua.enable = true;
-    };
-  in
-  {
-    home-managerModules.neovim =
-    { pkgs, ... }:
     {
-      programs = {
-        lazygit.enable = true;
-        neovim = {
-          enable = true;
-          defaultEditor = true;
-          vimAlias = true;
-        };
+      nix-global,
+      ...
+    }:
+    let
+      fmtConf = {
+        programs.stylua.enable = true;
       };
-      home.file.".config/nvim".source = ./.;
-      home.packages = with pkgs; [
-        tree-sitter
-        lua5_1
-        luarocks
-        ollama
-      ];
-    };
-  }
-  // nix-global.lib.mkDevEnv fmtConf (
-pkgs: corePkgs: {
+    in
+    {
+      home-managerModules.neovim =
+        { pkgs, ... }:
+        {
+          programs = {
+            lazygit.enable = true;
+            neovim = {
+              enable = true;
+              defaultEditor = true;
+              vimAlias = true;
+            };
+          };
+          home.file.".config/nvim".source = ./.;
+          home.packages = with pkgs; [
+            tree-sitter
+            lua5_1
+            luarocks
+            ollama
+          ];
+        };
+    }
+    // nix-global.lib.mkDevEnv fmtConf (
+      pkgs: corePkgs: {
         devShells.default = pkgs.mkShell {
           buildInputs =
             with pkgs;
-          [
-            lua
+            [
+              lua
               lua-language-server
               tree-sitter
-          ]
-          ++ corePkgs;
+            ]
+            ++ corePkgs;
         };
       }
-      );
+    );
 }
