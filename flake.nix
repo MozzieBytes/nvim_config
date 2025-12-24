@@ -32,6 +32,9 @@
       home.file.".config/nvim".source = ./.;
       home.packages = with pkgs; [
         tree-sitter
+        lua5_1
+        luarocks
+        ollama
       ];
     };
   }
