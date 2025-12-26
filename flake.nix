@@ -18,7 +18,7 @@
       };
     in
     {
-      home-managerModules.neovim =
+      homeManagerModules.neovim =
         { pkgs, ... }:
         {
           programs = {
