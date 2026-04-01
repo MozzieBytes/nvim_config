@@ -11,14 +11,14 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 -- UI Config
-vim.opt.number = true -- show absolute number
+vim.opt.number = true         -- show absolute number
 vim.opt.relativenumber = true -- add numbers to each line on the left side
-vim.opt.cursorline = true -- highlight cursor line underneath the cursor
-vim.opt.splitbelow = true -- open new vertical split bottom
-vim.opt.splitright = true -- open new horizontal splits right
-vim.opt.showmode = true -- Show vim mode
-vim.opt.colorcolumn = "81" -- Line width indicator
-vim.opt.wrap = false -- Line wrapping
+vim.opt.cursorline = true     -- highlight cursor line underneath the cursor
+vim.opt.splitbelow = true     -- open new vertical split bottom
+vim.opt.splitright = true     -- open new horizontal splits right
+vim.opt.showmode = false      -- Hide vim mode
+vim.opt.colorcolumn = "81"    -- Line width indicator
+vim.opt.wrap = false          -- Line wrapping
 
 -- Searching
 vim.opt.incsearch = true -- search as characters are entered

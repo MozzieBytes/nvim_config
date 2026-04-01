@@ -25,7 +25,6 @@ set_global_map("n", "<C-Right>", ":vertical resize +2<CR>")
 -- Window Management
 set_global_map("n", "<leader>vs", ":vs<CR>")
 set_global_map("n", "<leader>hs", ":split<CR>")
-set_global_map("n", "<leader>q", ":bd<CR>")
 
 -----------------
 -- Visual mode --
@@ -45,13 +44,9 @@ vim.lsp.config("*", {
 			vim.keymap.set(mode, lhs, rhs, opts)
 		end
 
-		set_lsp_map("n", "<leader>gh", vim.lsp.buf.hover)
-		set_lsp_map("n", "<leader>gd", "<cmd>Telescope lsp_definitions<cr>")
-		set_lsp_map("n", "<leader>gD", vim.lsp.buf.declaration)
-		set_lsp_map("n", "<leader>gi", "<cmd>Telescope lsp_implementations<cr>")
-		set_lsp_map("n", "<leader>go", "<cmd>Telescope lsp_type_definitions<cr>")
-		set_lsp_map("n", "<leader>gr", "<cmd>Telescope lsp_references<cr>")
-		set_lsp_map("n", "<leader>gs", vim.lsp.buf.signature_help)
+		set_lsp_map("n", "<leader>lh", vim.lsp.buf.hover)
+		set_lsp_map("n", "<leader>ldc", vim.lsp.buf.declaration)
+		set_lsp_map("n", "<leader>ls", vim.lsp.buf.signature_help)
 		set_lsp_map({ "n", "v" }, "<leader>rr", vim.lsp.buf.rename)
 		set_lsp_map({ "n", "x" }, "<leader>;", function()
 			vim.lsp.buf.format({ async = true })

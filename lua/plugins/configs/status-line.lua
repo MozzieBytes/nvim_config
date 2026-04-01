@@ -1,3 +1,4 @@
+-- return {}
 return {
 	"nvim-lualine/lualine.nvim",
 	lazy = false,
@@ -22,10 +23,24 @@ return {
 				ignore_focus = {},
 				always_divide_middle = true,
 				globalstatus = true,
+        showmode = false,
 				refresh = {
 					statusline = 1000,
 					tabline = 1000,
 					winbar = 1000,
+          refresh_time = 16, -- ~60fps
+          events = {
+            'WinEnter',
+            'BufEnter',
+            'BufWritePost',
+            'SessionLoadPost',
+            'FileChangedShellPost',
+            'VimResized',
+            'Filetype',
+            'CursorMoved',
+            'CursorMovedI',
+            'ModeChanged',
+          },
 				},
 			},
 			sections = {
@@ -33,7 +48,7 @@ return {
 				lualine_b = { "branch", "diff", "diagnostics" },
 				lualine_c = { "filename" },
 				lualine_x = { "encoding", "fileformat", "filetype" },
-				lualine_y = { "progress" },
+				lualine_y = { "lsp_status" },
 				lualine_z = { "location" },
 			},
 			inactive_sections = {
@@ -47,10 +62,6 @@ return {
 			tabline = {},
 			winbar = {},
 			inactive_winbar = {},
-			extensions = {
-				"neo-tree",
-				"toggleterm",
-			},
 		})
 	end,
 }

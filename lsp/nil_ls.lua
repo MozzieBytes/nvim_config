@@ -1,4 +1,4 @@
-require("nvim-treesitter").install{ "nix" }
+-- require("nvim-treesitter").install{ "nix" }
 return {
 	cmd = { "nil" },
 	filetypes = { "nix" },

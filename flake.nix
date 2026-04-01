@@ -44,6 +44,8 @@
           buildInputs =
             with pkgs;
             [
+              (pkgs.writeShellScriptBin "vim" ''exec ${pkgs.neovim}/bin/nvim "$@"'')
+              neovim
               lua
               lua-language-server
               tree-sitter

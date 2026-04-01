@@ -15,24 +15,11 @@ either independently, or as part of a [home-manager](https://github.com/nix-comm
 > [!NOTE]
 > Due to the choice in package manager, the reproducibility of this config is not guaranteed.
 
-Despite being designed with home-manager in mind, this configuration still uses a combination of the Lazy Plugin-Manager and Mason for the management of dependencies.
+Despite being designed with home-manager in mind, this configuration still uses the Lazy Plugin-Manager for the management of dependencies.
 
 The exception to this is language-servers, which are expected to be installed externally to the editor using your preferred package manager.
 
 This approach allows this configuration to run on systems that don't utilize Nix.
-
-### Plugin List
-
-> [!NOTE]
-> Not all plugins are listed here. Some are omitted for brevity
-
-| Plugin | Explanation |
-|:------:|:-----------:|
-| Language Servers | The following languages are currently supported: Go, Lua, Terraform, Nix |
-| [direnv.nvim](https://github.com/actionshrimp/direnv.nvim) | A wrapper around direnv, that allows for hot-loading of environment changes within the Neovim shell. |
-| [Gen.Nvim](https://github.com/David-Kunz/gen.nvim) | Configured to allow for a local-copilot by utilizing [Ollama](https://ollama.com). Configured to run on `<space>]` |
-| [neotree](https://github.com/nvim-neo-tree/neo-tree.nvim) | A traditional file-explorer for neovim. Configured to open on `<space>fe` |
-| [toggleterm](https://github.com/akinsho/toggleterm.nvim) | A simple floating-terminal that is used to enable rapid-testing of changes. Configured to open on `<space>tt` |
 
 ## Local Development
 
