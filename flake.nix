@@ -21,13 +21,13 @@
       homeManagerModules.neovim =
         { pkgs, ... }:
         {
-          programs = {
-            lazygit.enable = true;
-            neovim = {
-              enable = true;
-              defaultEditor = true;
-              vimAlias = true;
-            };
+          programs.lazygit.enable = true;
+          programs.neovim = {
+            enable = true;
+            defaultEditor = true;
+            vimAlias = true;
+            withRuby = false;
+            withPython3 = false;
           };
           home.file.".config/nvim".source = ./.;
           home.packages = with pkgs; [
