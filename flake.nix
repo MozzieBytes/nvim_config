@@ -35,6 +35,8 @@
             lua5_1
             luarocks
             ollama
+            lsof
+            fd
           ];
         };
     }

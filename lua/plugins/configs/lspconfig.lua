@@ -4,6 +4,5 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
-		"nvim-telescope/telescope.nvim",
 	},
 }
