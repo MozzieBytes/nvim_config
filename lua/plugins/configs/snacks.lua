@@ -24,6 +24,7 @@ return {
             preset = "sidebar",
             layout = { position = "right" },
             auto_hide = { "input" },
+            auto_close = true,
           },
         },
       },
