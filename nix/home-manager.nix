@@ -10,7 +10,7 @@
       withRuby = false;
       withPython3 = false;
     };
-    home.file.".config/nvim".source = ./.;
+    home.file.".config/nvim".source = ./..;
     home.packages = with pkgs; [
       tree-sitter
         lua5_1
