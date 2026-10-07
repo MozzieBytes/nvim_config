@@ -12,7 +12,7 @@ return {
     },
     opts = {
       strategies = {
-        chat   = { adapter = "ollama" },
+        chat = { adapter = "ollama" },
         inline = { adapter = "ollama" },
       },
       adapters = {

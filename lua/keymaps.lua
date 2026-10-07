@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 
 -- Helper for global mappings
 local set_global_map = function(mode, lhs, rhs)
-	vim.keymap.set(mode, lhs, rhs, opts)
+  vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 -----------------
@@ -38,21 +38,21 @@ set_global_map("v", ">", ">gv")
 ----- LSP ------
 ----------------
 vim.lsp.config("*", {
-	on_attach = function(_, bufnr)
-		local function set_lsp_map(mode, lhs, rhs)
-			opts = { buffer = bufnr }
-			vim.keymap.set(mode, lhs, rhs, opts)
-		end
+  on_attach = function(_, bufnr)
+    local function set_lsp_map(mode, lhs, rhs)
+      opts = { buffer = bufnr }
+      vim.keymap.set(mode, lhs, rhs, opts)
+    end
 
-		set_lsp_map("n", "<leader>lh", vim.lsp.buf.hover)
-		set_lsp_map("n", "<leader>ldc", vim.lsp.buf.declaration)
-		set_lsp_map("n", "<leader>ls", vim.lsp.buf.signature_help)
-		set_lsp_map({ "n", "v" }, "<leader>rr", vim.lsp.buf.rename)
-		set_lsp_map({ "n", "x" }, "<leader>;", function()
-			vim.lsp.buf.format({ async = true })
-		end)
-		set_lsp_map("n", "<leader>[", function()
-			require("tiny-code-action").code_action()
-		end)
-	end,
+    set_lsp_map("n", "<leader>lh", vim.lsp.buf.hover)
+    set_lsp_map("n", "<leader>ldc", vim.lsp.buf.declaration)
+    set_lsp_map("n", "<leader>ls", vim.lsp.buf.signature_help)
+    set_lsp_map({ "n", "v" }, "<leader>rr", vim.lsp.buf.rename)
+    set_lsp_map({ "n", "x" }, "<leader>;", function()
+      vim.lsp.buf.format({ async = true })
+    end)
+    set_lsp_map("n", "<leader>[", function()
+      require("tiny-code-action").code_action()
+    end)
+  end,
 })
